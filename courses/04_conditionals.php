@@ -36,7 +36,7 @@ if ($age >= 18) {
   echo 'Sorry, you are too young to vote.';
 }
 
-echo '<br/>';
+echo '<br/>--------------------<br/>';
 
 
 // Dates
@@ -51,7 +51,7 @@ if ($t < 12) {
 } else {
   echo 'Have a good evening!';
 }
-echo '<br/>';
+echo '<br/>--------------------<br/>';
 
 
 
@@ -71,14 +71,14 @@ if (!isset($posts[0])) {
 } else {
   echo 'There are no posts: isset()';
 }
-echo '<br/>';
+echo '<br/>--------------------<br/>';
 
 if (!empty($posts[0])) {
   echo $posts[0];
 } else {
   echo 'There are no posts: empty()';
 }
-echo '<br/>';
+echo '<br/>--------------------<br/>';
 
 
 
@@ -92,31 +92,32 @@ echo '<br/>';
 // Echo based on a condition (Same as above)
 echo !isset($posts[0]) ? $posts[0] : 'There are no posts';
 
-echo '<br/>';
+echo '<br/>--------------------<br/>';
 
 echo !empty($posts[0]) ? $posts[0] : 'There are no posts';
 
 
 // Assign a variable based on a condition
 $firstPost = !empty($posts[0]) ? $posts[0] : 'There are no posts';
-echo '<br/>';
+
 
 $firstPost = !empty($posts[0]) ? $posts[0] : null;
-echo '<br/>';
 
 /* Null Coalescing Operator ?? (PHP 7.4)
 Will return null if $posts is empty
  Always returns first parameter, unless first parameter happens to be NULL*/
 $firstPost = $posts[0] ?? null;
+echo '<br/>--------------------<br/>';
 
 var_dump($firstPost);
 
+echo '<br/>--------------------<br/>';
 
 /* -------- Switch Statements ------- */
 
-$favcolor = 'red';
+$favColor = 'red';
 
-switch ($favcolor) {
+switch ($favColor) {
   case 'red':
     echo 'Your favorite color is red!';
     break;
