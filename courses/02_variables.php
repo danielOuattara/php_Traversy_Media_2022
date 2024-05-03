@@ -67,6 +67,6 @@ echo "<br/>";
 // Constants - Cannot be changed
 define('HOST', 'localhost');
 define('USER', 'root');
-const PASWORD = '*password*';
+const PASSWORD = '*password*';
 
 var_dump(HOST);
