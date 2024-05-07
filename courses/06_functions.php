@@ -26,8 +26,7 @@ $y = 12;
 function AboutScope()
 {
   global $y;
-  echo "AboutScope: ";
-  echo $y . "<br>";
+  echo "AboutScope: ", $y . "<br>";
 }
 
 
@@ -41,7 +40,7 @@ AboutScope();
 
 function registerUser2($username)
 {
-  echo "User ${username} has been registered!  <br />";
+  echo "User $username has been registered!  <br />";
 }
 
 

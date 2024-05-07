@@ -80,12 +80,12 @@ echo "<br/>";
 $posts = ['Post One', 'Post Two', 'Post Three'];
 
 foreach ($posts as $post) {
-  echo "${post} <br>";
+  echo "$post <br>";
 }
 echo "<br/>";
 
 foreach ($posts as $index => $post) {
-  echo "${index} - ${post} <br>";
+  echo $index + 1, "- $post <br>";
 }
 echo "<br/>";
 
@@ -99,6 +99,6 @@ $person = [
 
 // Get Keys
 foreach ($person as $key => $val) {
-  echo "${key} = ${val} <br>";
+  echo "$key -> $val <br>";
 }
 echo "<br/>";

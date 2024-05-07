@@ -135,7 +135,7 @@ echo "\n----------------------------------------\n";
 
 // Map through array and create a new one
 $newNumbers = array_map(function ($item) {
-  return "Number ${item}";
+  return "Number $item";
 }, $numbers);
 
 echo '$newNumbers = ';
@@ -143,8 +143,18 @@ print_r($newNumbers);
 echo "\n----------------------------------------\n";
 
 
+// Map through array and create a new one
+$newNumbers = array_map(fn ($item) => $item, $numbers);
+
+// fn ($name) => print($name)
+
+echo '$newNumbers 00 = ';
+print_r($newNumbers);
+echo "\n----------------------------------------\n";
+
+
 $newNumbersPrime = array_map(function ($item) {
-  return "Number ${item}";
+  return "Number $item";
 }, [...$numbers]);
 
 
@@ -153,13 +163,13 @@ print_r($newNumbersPrime);
 echo "\n----------------------------------------\n";
 
 
-$newNumbers2 = array_map(fn ($item) => "Number ${item}", $numbers);
+$newNumbers2 = array_map(fn ($item) => "Number $item", $numbers);
 echo '$newNumbers2 = ';
 print_r($newNumbers2);
 echo "\n----------------------------------------\n";
 
 
-$newNumbers2Prime = array_map(fn ($item) => "Number ${item}", [...$numbers]);
+$newNumbers2Prime = array_map(fn ($item) => "Number $item", [...$numbers]);
 echo '$newNumbers2Prime = ';
 print_r($newNumbers2Prime);
 echo "\n----------------------------------------\n";
