@@ -32,13 +32,15 @@ if (isset($_POST['submit'])) {
 <!-- Pass data through a form -->
 <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
   <div>
-    <label>Name: </label>
-    <input type="text" name="username">
+    <label for="username">Name:
+      <input type="text" name="username" id="username">
+    </label>
   </div>
   <br>
   <div>
-    <label>Password: </label>
-    <input type="text" name="age">
+    <label for="password">Password:
+      <input type="text" name="age" id="password">
+    </label>
   </div>
   <br>
   <input type="submit" name="submit" value="Submit">
