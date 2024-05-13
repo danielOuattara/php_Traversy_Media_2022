@@ -38,8 +38,8 @@ if (isset($_POST['submit'])) {
   </div>
   <br>
   <div>
-    <label for="password">Password:
-      <input type="text" name="age" id="password">
+    <label for="age">Password:
+      <input type="text" name="age" id="age">
     </label>
   </div>
   <br>
