@@ -14,16 +14,22 @@
 
 
 // Set a cookie
-setcookie('name', 'Brad', time() + 86400 * 30); // 86400 = 1 day
+setcookie('username', 'Brad Traversy', time() + 86400 * 30); // 86400 = 1 day
 setcookie('email', 'brad@email.com', time() + 86400 * 30); // 86400 = 1 day
+setcookie('contact', 'brad@email.com', time() + 86400 * 30); // 86400 = 1 day
 
 echo time(), '<br />';
-print_r($_COOKIE);
+
+echo "<pre>";
+echo print_r($_COOKIE);
+echo "</pre>";
+
+// print_r($_COOKIE);
 
 // Get a cookie
-if (isset($_COOKIE['name'])) {
-  echo $_COOKIE['name'];
+if (isset($_COOKIE['email'])) {
+  echo "\$_COOKIE['email'] = " . $_COOKIE['email'];
 }
 
 // Delete a cookie
-setcookie('name', '', time() + 10);
+setcookie('username', '', time() + 1000);
