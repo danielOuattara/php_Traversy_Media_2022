@@ -17,11 +17,7 @@ if (isset($_POST['submit'])) {
     FILTER_SANITIZE_FULL_SPECIAL_CHARS
   );
 
-  $password = filter_input(
-    INPUT_POST,
-    'password',
-    FILTER_SANITIZE_FULL_SPECIAL_CHARS
-  );
+  $password = $_POST["password"];
 
   if ($username == 'daniel' && $password == 'password') {
     // first set Session variable
