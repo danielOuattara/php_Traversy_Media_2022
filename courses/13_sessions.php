@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
 
   $password = $_POST["password"];
 
-  if ($username == 'daniel' && $password == 'password') {
+  if ($username == 'john' && $password == 'secret') {
     // first set Session variable
     $_SESSION['username'] = $username;
     // then redirect user to another page
@@ -34,13 +34,13 @@ if (isset($_POST['submit'])) {
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
   <h1>Login</h1>
   <div>
-    <label>Username: </label>
-    <input type="text" name="username">
+    <label for="username">Username: </label>
+    <input type="text" name="username" id="username">
   </div>
   <br>
   <div>
-    <label>Password: </label>
-    <input type="password" name="password">
+    <label for="password">Password: </label>
+    <input type="password" name="password" id="password">
   </div>
   <br>
   <input type="submit" name="submit" value="Submit">

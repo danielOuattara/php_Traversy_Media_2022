@@ -4,6 +4,9 @@ session_start();
 if (!isset($_SESSION["username"])) {
     die('You must be logged in');
 }
+echo "<pre>";
+echo $_SESSION["username"];
+echo "</pre>";
 ?>
 
 
