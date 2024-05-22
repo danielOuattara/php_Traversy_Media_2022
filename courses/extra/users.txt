@@ -1,0 +1,12 @@
+Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+
+Doloribus provident cumque quidem soluta, obcaecati ea, 
+aspernatur, rerum atque id consequatur quae. 
+
+Est minus libero tempore quos quidem corporis explicabo 
+consequuntur veritatis alias et nostrum dolores eos hic 
+dolore, voluptatem itaque inventore adipisci omnis, 
+quas cupiditate animi expedita reiciendis! 
+ 
+
+\n //----------- end of file
