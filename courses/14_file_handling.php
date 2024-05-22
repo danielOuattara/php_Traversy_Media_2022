@@ -1,24 +1,28 @@
 <?php
 
 
-/*File Handling 
+/* File Handling 
 ================
 
   File handling is the ability to read and write files on the server.
-  PHP has built in functions for reading and writing files.
+  
+  PHP has built-in functions for reading and writing files.
 */
 
-$file_path = './extra/users.txt';
+$file = './extra/users.txt';
+
+
 
 
 /* 
 readfile(): 
+
 Returns the content and number of bytes read 
 from the file on success, or FALSE on failure. 
 ---------------------------------------------*/
 
-if (file_exists($file_path)) {
-  echo readfile($file_path), "<br><br>";
+if (file_exists($file)) {
+  echo readfile($file), "<br><br>";
 }
 
 /* 
@@ -41,14 +45,14 @@ if (file_exists($file_path)) {
 
 /* File Open, Read, Write, Close 
 ---------------------------------*/
-if (file_exists($file_path)) {
-  $handle = fopen($file_path, 'r+');
-  $contents = fread($handle, filesize($file_path));
+if (file_exists($file)) {
+  $handle = fopen($file, 'r+');
+  $contents = fread($handle, filesize($file));
   fclose($handle);
   echo $contents;
 } else {
   echo "File not Exist !";
-  $handle = fopen($file_path, 'x+'); # Create the file
+  $handle = fopen($file, 'x+'); # Create the file
   $contents = 'Brad' .  PHP_EOL . 'Sara' .  PHP_EOL . 'Mike' .  PHP_EOL . 'John';
   fwrite($handle, $contents);
   fclose($handle);
