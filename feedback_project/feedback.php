@@ -1,4 +1,4 @@
-<?php include("./includes/header.php") ?>
+<?php include_once("./includes/header.php") ?>
 
 <?php
 // $feedback = [
@@ -6,21 +6,24 @@
 //     'id' => 1,
 //     'name' => 'John Doe',
 //     'email' => 'j.doe@email.com',
-//     'body' => 'I like to learn coding with Brad'
+//     'feedback' => 'I like to learn coding with Brad',
+//     'date' => 'now'
 //   ],
 //   [
 //     'id' => 2,
 //     'name' => 'Jana Doe',
 //     'email' => 'jana@email.com',
-//     'body' => 'I learnt a lot with Brad. Good teacher'
+//     'feedback' => 'I learnt a lot with Brad. Good teacher',
+//     'date' => '2 days ago'
 //   ],
 //   [
 //     'id' => 3,
 //     'name' => 'Bob Marley',
 //     'email' => 'marley@email.com',
-//     'body' => 'Gandja is good, Coding with Brad too !'
+//     'feedback' => 'Gandja is good, Coding with Brad too !',
+//     'date' => 'yesterday'
 //   ],
-// ] 
+// ]
 ?>
 
 <?php
@@ -40,12 +43,14 @@ $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
       <p class="lead mt3"> No feedback yet !</p>
     <?php endif; ?>
 
-    <?php foreach ($feedback as $subArray) : ?>
+    <?php foreach ($feedback as $single_feedback) : ?>
       <div class="card my-3 w-75">
         <div class="card-body text-center">
-          <?php echo $subArray["body"]; ?>
+          <h3>
+            <?php echo $single_feedback["feedback"]; ?>
+          </h3>
           <div class="text-secondary mt-2">
-            <?php echo "by {$subArray['name']} on {$subArray['date']}"; ?>
+            <p><?php echo "by {$single_feedback['name']} on {$single_feedback['date']}"; ?></p>
           </div>
         </div>
       </div>
@@ -53,4 +58,4 @@ $feedback = mysqli_fetch_all($result, MYSQLI_ASSOC);
   </div>
 </main>
 
-<?php include("./includes/footer.php") ?>
+<?php include_once("./includes/footer.php") ?>

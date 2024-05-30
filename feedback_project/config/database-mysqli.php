@@ -7,13 +7,15 @@ define('DB_NAME', 'php_dev_traversy');
 
 
 // create connection agent
-
 $conn = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_NAME);
 
-# print_r($conn);
+// echo "<pre>";
+// print_r($conn);
+// echo "<pre/>";
 
+// check connection
 if ($conn->connect_error) {
-    die("Connection Failed {$conn->connect_error}");
+    die("CONNECTION FAILED : {$conn->connect_error}");
 }
 
 # echo 'Connected !';

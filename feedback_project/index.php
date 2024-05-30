@@ -1,8 +1,8 @@
-<?php include("./includes/header.php") ?>
+<?php include_once("./includes/header.php") ?>
 
 <?php
-$name = $email = $body = null;
-$nameError = $emailError = $bodyError = '';
+$name = $email = $feedback = null;
+$nameError = $emailError = $bodyError = null;
 
 // Form submit
 
@@ -22,29 +22,33 @@ if (isset($_POST['submit'])) {
     $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
   }
 
-  // validate body
-  if (empty($_POST['body'])) {
+  // validate feedback
+  if (empty($_POST['feedback'])) {
     $bodyError = 'A comment is required';
   } else {
-    $body = filter_input(INPUT_POST, 'body', FILTER_SANITIZE_SPECIAL_CHARS);
+    $feedback = filter_input(INPUT_POST, 'feedback', FILTER_SANITIZE_SPECIAL_CHARS);
   }
 
   // if no error !
   if (empty($nameError) && empty($emailError) && empty($bodyError)) {
     // add to db
-    $sql = "INSERT INTO feedback(name, email, body) VALUES( '$name', '$email', '$body')";
+    $sql = "INSERT INTO feedback(name, email, feedback) VALUES( '$name', '$email', '$feedback')";
     if (mysqli_query($conn, $sql)) {
       //success
-
       header('Location: feedback.php');
+      exit;
     } else {
       // Error
-      echo 'Erorr' . mysqli_error($conn);
+      echo 'Error' . mysqli_error($conn);
     }
+    # mysqli_query($conn, $sql) &&  header('Location: feedback.php') || 'Error' . mysqli_error($conn);
   }
 }
 
+
 ?>
+
+
 <main>
   <div class="container d-flex flex-column align-items-center">
     <!-- <img src="/php-crash/feedback/img/logo.png" class="w-25 mb-3" alt="brad traversy media"> -->
@@ -67,8 +71,8 @@ if (isset($_POST['submit'])) {
       </div>
 
       <div class="mb-3">
-        <label for="body" class="form-label">Feedback</label>
-        <textarea class="form-control <?php echo $bodyError ? 'is-invalid' : null; ?>" id="body" name="body" placeholder="Enter your feedback"></textarea>
+        <label for="feedback" class="form-label">Feedback</label>
+        <textarea class="form-control <?php echo $bodyError ? 'is-invalid' : null; ?>" id="feedback" name="feedback" placeholder="Enter your feedback"></textarea>
         <div class="invalid-feedback"> <?php echo $bodyError; ?></div>
       </div>
 
@@ -79,4 +83,4 @@ if (isset($_POST['submit'])) {
   </div>
 </main>
 
-<?php include("./includes/footer.php") ?>
+<?php include_once("./includes/footer.php") ?>

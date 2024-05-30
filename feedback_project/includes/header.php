@@ -1,4 +1,4 @@
-<?php include './config/database.php'; ?>
+<?php include_once './config/database-mysqli.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">

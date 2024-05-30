@@ -1,4 +1,4 @@
-<?php include("./includes/header.php") ?>
+<?php include_once("./includes/header.php") ?>
 
 <main>
   <div class="container d-flex flex-column align-items-center">
@@ -10,4 +10,4 @@
   </div>
 </main>
 
-<?php include("./includes/footer.php") ?>
+<?php include_once("./includes/footer.php") ?>

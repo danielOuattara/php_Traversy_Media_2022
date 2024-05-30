@@ -1,0 +1,32 @@
+# Timestamps
+
+- 0:00 - Intro
+- 0:59 - Linode Sponsor
+- 1:40 - Slides
+- 9:47 - Getting Setup With XAMPP
+- 14:30 - Opening a PHP File
+- 15:38 - VS Code  Setup & Auto Reload
+- 18:20 - Output Constructs & Functions
+- 26:35 - Data Types & Variables
+- 34:32 - Arrays
+- 42:05 - Conditionals
+- 52:57 - Loops
+- 1:02:00 - Functions
+- 1:09:47 - Array Functions
+- 1:24:15 - String Functions
+- 1:30:28 - Superglobals
+- 1:34:05 - $_GET & $_POST
+- 1:40:56 - Sanitizing Inputs
+- 1:45:24 - Cookies
+- 1:49:10 - Sessions
+- 1:58:45 - File Handling
+- 2:03:48 - File Uploading
+- 2:17:20 - Erros & Exceptions
+- 2:22:05 - OOP & Classes
+- 2:35:14 - Feedback App Project
+- 2:38:15 - Including PHP Pages
+- 2:42:23 - Database & Feedback Table Setup
+- 2:48:45 - Connecting To MySQL
+- 2:53:54 - If & Foreach Shorthands
+- 2:58:11 - Fetch From Database
+- 3:01:05 - Inserting Data From a Form
